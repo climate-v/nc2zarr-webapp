@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompleteConversionComponent implements OnInit {
 
+  public activeId: number;
+
   constructor() { }
 
   ngOnInit(): void {

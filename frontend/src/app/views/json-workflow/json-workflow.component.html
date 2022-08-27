@@ -8,14 +8,21 @@
     Reading NetCDF4 data as Zarr for rapid data access</a>.
 </p>
 
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
-  <li ngbNavItem>
+<ul ngbNav [(activeId)]="activeId" #nav="ngbNav" class="nav-tabs">
+  <li [ngbNavItem]="0">
     <a ngbNavLink>Overview</a>
-    <ng-template ngbNavContent><app-json-workflow-overview></app-json-workflow-overview></ng-template>
+    <ng-template ngbNavContent>
+      <app-json-workflow-overview></app-json-workflow-overview>
+    </ng-template>
   </li>
-  <li ngbNavItem>
+  <li [ngbNavItem]="1">
     <a ngbNavLink>New workflow</a>
-    <ng-template ngbNavContent><app-json-workflow-create></app-json-workflow-create></ng-template>
+    <ng-template ngbNavContent>
+      <app-json-workflow-create></app-json-workflow-create>
+    </ng-template>
   </li>
 </ul>
-<div [ngbNavOutlet]="nav" style="margin-bottom: 50px;"></div>
+<div [ngbNavOutlet]="nav" style="margin-bottom: 25px;"></div>
+<button *ngIf="activeId !== 1" (click)="activeId = 1" style="margin-bottom: 25px;" class="btn btn-primary">New
+  workflow
+</button>

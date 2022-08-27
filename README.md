@@ -68,7 +68,7 @@ services:
 
   django:
     ports:
-      - "<backend-port>:<backend-port>"
+      - "<backend-port>:8000"
     volumes:
       - <input-directory>:/root/public/input
       - <output-directory>:/root/public/output
