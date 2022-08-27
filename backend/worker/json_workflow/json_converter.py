@@ -4,8 +4,8 @@ import os.path
 import fsspec
 import netCDF4
 import ujson
-from fsspec_reference_maker.combine import MultiZarrToZarr
-from fsspec_reference_maker.hdf import SingleHdf5ToZarr
+from kerchunk.combine import MultiZarrToZarr
+from kerchunk.hdf import SingleHdf5ToZarr
 
 from worker.json_workflow.json_workflow_error import JsonWorkflowError
 
