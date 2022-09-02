@@ -38,4 +38,4 @@ RUN cp main.*.js /usr/share/nginx
 # Expose port 80
 EXPOSE 80
 
-CMD ["start-nginx.sh"]
+ENTRYPOINT ["start-nginx.sh"]
